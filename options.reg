@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; 自動ログオンを選択できるようにする
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device]
+"DevicePasswordLessBuildVersion"=0
+
+; システムトレイの時計に秒を表示する
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSecondsInSystemClock"=dword:00000001
+
+; Windowsスタートアップのサウンドを再生する
+; Win10ではデフォルトが無効になっていたがWin11から復活
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\BootAnimation]
+"DisableStartupSound"=dword:00000000

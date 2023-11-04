@@ -1,0 +1,113 @@
+Windows Registry Editor Version 5.00
+
+; Win11 向け
+; コンテキストメニューをWin10に戻す
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
+
+; 日付と時刻 > インターネット時刻
+; NTPサーバを ntp.nict.jp にする
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\DateTime\Servers]
+"0"=hex(1):6E,00,74,00,70,00,2E,00,6E,00,69,00,63,00,74,00,2E,00,6A,00,70,00,00,00
+@="0"
+
+; デスクトップアイコンの設定
+; コンピューター, ユーザーのファイル, ネットワーク, ごみ箱 表示
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000000
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000000
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+
+; 個人用設定
+; 色
+; スタートとタスクバーにアクセントカラーを表示する
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001
+
+; タイトルバーとウィンドウ枠線にアクセントカラーを付ける
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001
+
+; スタート > フォルダー
+; 設定, エクスプローラー, ドキュメント, ダウンロード, ネットワーク, 個人用フォルダー 表示
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Start]
+"VisiblePlaces"=hex(3):BC,24,8A,14,0C,D6,89,42,A0,80,6E,D9,BB,A2,48,82,CE,\
+D5,34,2D,5A,FA,43,45,82,F2,22,E6,EA,F7,77,3C,2F,B3,67,E3,DE,89,55,43,BF,CE,\
+61,F3,7B,18,A9,37,44,81,75,FE,0D,08,AE,42,8B,DA,34,ED,97,B6,63,94,4A,B0,BD,\
+74,4A,F9,68,4F,8B,D6,43,98,07,1D,A8,BC,86,08,73,52,AA,51,43,42,9F,7B,27,76,\
+58,46,59,D4
+
+; タスクバー
+; タスクバー項目
+; 検索: 非表示
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"SearchboxTaskbarMode"=dword:00000000
+
+; タスクバーの配置: 左揃え
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarAl"=dword:00000000
+
+; フォルダーオプション
+; 全般
+; エクスプローラーで開く: PC
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"LaunchTo"=dword:00000001
+
+; 最近使用したファイルを表示する 無効
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowRecent"=dword:00000000
+
+; 頻繁に使用されるフォルダーを表示する 無効
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowFrequent"=dword:00000000
+
+; Ofice.com のファイルを表示する 無効
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowCloudFilesInQuickAccess"=dword:00000000
+
+; 表示
+; ナビゲーションウィンドウ
+; このPCを表示
+; わからん
+; ネットワークを表示
+; わからん
+
+; ライブラリの表示
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}]
+"System.IsPinnedToNameSpaceTree"=dword:00000001
+
+; ファイルおよびフォルダー
+; タイトルバーに完全なパスを表示する
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState]
+"FullPath"=dword:00000001
+
+; 隠しファイル、隠しフォルダー、および隠しドライブを表示する
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000001
+
+; 暗号化や圧縮された NTFS ファイルをカラーで表示する
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowEncryptCompressedColor"=dword:00000001
+
+; 項目間のスペースを減らす(コンパクトビュー)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"UseCompactMode"=dword:00000001
+
+; 拡張子表示
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"HideFileExt"=dword:00000000
+
+; 保護されたオペレーティングシステムファイルを表示しない 無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSuperHidden"=dword:00000001
+
+; 常にメニューを表示
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"AlwaysShowMenus"=dword:00000001
