@@ -25,6 +25,25 @@ Windows Registry Editor Version 5.00
 "{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000000
 "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
 
+; システム
+; 開発者向け
+; タスクの終了
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\TaskbarDeveloperSettings]
+"TaskbarEndTask"=dword:00000001
+
+; 通知 > 追加の設定
+; 更新後およびサインイン時にWindowsのウェルカムエクスペリエンスを表示して、新機能と提案を表示する 無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-310093Enabled"=dword:00000000
+
+; Windowsを最大限に活用し、このデバイスの設定を完了する方法を提案する 無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement]
+"ScoobeSystemSettingEnabled"=dword:00000000
+
+; Windowsを使用する際のヒントや提案を入手する 無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-338389Enabled"=dword:00000000
+
 ; 個人用設定
 ; 色
 ; スタートとタスクバーにアクセントカラーを表示する
