@@ -77,6 +77,11 @@ D5,34,2D,5A,FA,43,45,82,F2,22,E6,EA,F7,77,3C,2F,B3,67,E3,DE,89,55,43,BF,CE,\
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "TaskbarAl"=dword:00000000
 
+; プライバシーとセキュリティ
+; 検索のハイライトを表示する無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SearchSettings]
+"IsDynamicSearchBoxEnabled"=dword:00000000
+
 ; フォルダーオプション
 ; 全般
 ; エクスプローラーで開く: PC
@@ -94,6 +99,10 @@ D5,34,2D,5A,FA,43,45,82,F2,22,E6,EA,F7,77,3C,2F,B3,67,E3,DE,89,55,43,BF,CE,\
 ; Ofice.com のファイルを表示する 無効
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 "ShowCloudFilesInQuickAccess"=dword:00000000
+
+; 同期プロバイダーの通知を表示する 無効
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSyncProviderNotifications"=dword:00000000
 
 ; 表示
 ; ナビゲーションウィンドウ
